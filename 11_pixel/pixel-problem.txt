@@ -1,0 +1,20 @@
+Challenge 11 - The escape from Pixel Island
+As a NASA engineer, assigned to the Landsat Data Continuity Mission, you have been informed that the satellite images from the Scabb Island present weird patterns and possible something hidden in them. The following information was sent to your department yesterday:
+
+Hi dear fellow,
+
+In my research about salmon fishing in the Yemen and Caribbean Islands I recently found something quite remarkable in the supposedly uninhabited Scabb Island. I can see moving pixels from the satellite images received every 12 hours. I attach a drawing of the first one I found.
+
+I managed to create a program that reads the satellite images and convert them into a format that you may be able to analyze with your resources and expertise.
+
+My intuition tells me that you need to add up the weird black squares and look for a pattern. Good Luck!
+As the letter said, you need to write a program that adds up the squares and finds the hidden message.
+
+
+Input
+
+First line contains the number of test cases, T, and T cases follow (each one in a different line). Each test case consists of several strings separated by whitespaces. Each string contains only the characters p, w and b (see image above) and represents one pattern of squares.
+
+Output
+
+For each test case, output the secret message (on a different line).
