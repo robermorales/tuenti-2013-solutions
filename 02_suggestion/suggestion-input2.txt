@@ -1,0 +1,9 @@
+#Dictionary file
+smallDictionary
+#Suggestion numbers
+4
+#Find the suggestions
+aniresiobyhigyic
+xttslxiyqpyaspqre
+yaspqrexttslxiyqp
+yhigyicaniresiob
