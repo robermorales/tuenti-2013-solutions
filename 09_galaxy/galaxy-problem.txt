@@ -1,0 +1,133 @@
+Challenge 9 - Defenders of the Galaxy
+The galaxy is infested with colonies of nasty creatures, called the Zorg. Their only goal is to conquer and destroy every other form of intelligent life. They arrived on our home planet a few hours ago, and their numbers are counted in the millions. If they reach the capital city, all hope will be lost.
+
+The Zorg battle strategy is basically to overrun their enemies with thousands and thousands of their minions, the Zorglings. They are weak creatures, like big cockroaches, but they are fast (1 m/s, according to our observations). Inside each one of them is a powerful, short-ranged bio-explosive, triggered by their mind, effectively converting them into moving grenades. Fortunately, to reach the walls of the great city of Azundys, they have to pass through a narrow canyon of W meters wide (allowing only W Zorglings to enter the canyon per second) and H meters long, heavily defended by our allies, the Protass, standing at the end of the canyon.
+
+The Protass soldiers have laser guns. Each gun can fire once per second. Laser impact is fatal for the Zorglings, and the elite soldiers never miss a shot (this means that with 10 soldiers we can kill 10 Zorglings per second). Each soldier's equipment and training cost S gold. As soon as the Zorlings appear in the canyon entrance, they will be in range, so the soldiers can shoot them.
+
+We also have a special weapon: the Crematorium. Its energy and fuel consumption are insane, but it will burn all the Zorglings present to ashes in the canyon at a given time. Each time the Crematorium is used, it costs C gold.
+
+If a single Zorgling reaches the end of the canyon, it will blow up, destroying the last city defenses, and thus dooming the last standing free planet in this quadrant of the galaxy.
+
+Given that you have G gold, and all the data that was presented above, you must output how long you will survive the attack, in seconds, with the most optimal configuration (how much you will spend in soldiers and how much in Crematoriums). You must assume that the Zorg army will be infinite, and they will try to enter the canyon continuously, with as many of them as they can.
+
+Input
+
+Integer T: Number of test cases.
+T tests cases follow. For each test case, in a single line, whitespace-separated:
+Integer W: width of the canyon, in meters
+Integer H: length of the canyon, in meters
+Integer S: price to train a soldier, in pieces of gold
+Integer C: price to trigger a Crematorium, in pieces of gold
+Integer G: amount of gold that you have
+Output
+
+For each test case, the number of seconds you can resist. If you think you can take on the Zorg overrun forever, output "-1" (without the quotes).
+
+Example
+
+Suppose there is a canyon of dimensions 3x2. You have 2 soldiers and 1 Crematorium. The battle will unfold as follows (Zorglings are represented by a "v", the canyon walls with a "#", and the city walls with a "-"):
+
+#···#
+#···#
+#---#
+Everything is ready. t=0s
+
+#vvv#
+#···#
+#---#
+Zorglings appear. t=1s
+
+#··v#
+#···#
+#---#
+The 2 soldiers instantly kill 2 Zorglings. t=1s
+
+#vvv#
+#··v#
+#---#
+More Zorglings appear. t=2s
+
+#·vv#
+#···#
+#---#
+The soldiers kill another 2 Zorglings. t=2s
+
+#vvv#
+#·vv#
+#---#
+More Zorglings appear. t=3s
+
+#vvv#
+#···#
+#---#
+The soldiers kill another 2 Zorglings. t=3s
+
+#vvv#
+#vvv#
+#---#
+More Zorglings appear. t=4s
+
+#vvv#
+#··v#
+#---#
+The soldiers kill another 2 Zorglings. t=4s
+
+#···#
+#···#
+#---#
+We have to use the Crematorium right now, killing every single Zorgling in the cannon. t=4s
+
+#vvv#
+#···#
+#---#
+Zorglings appear. t=5s
+
+#··v#
+#···#
+#---#
+The 2 soldiers instantly kill 2 Zorglings. t=5s
+
+#vvv#
+#··v#
+#---#
+More Zorglings appear. t=6s
+
+#·vv#
+#···#
+#---#
+The soldiers kill another 2 Zorglings. t=6s
+
+#vvv#
+#·vv#
+#---#
+More Zorglings appear. t=7s
+
+#vvv#
+#···#
+#---#
+The soldiers kill another 2 Zorglings. t=7s
+
+#vvv#
+#vvv#
+#---#
+More Zorglings appear. t=8s
+
+#vvv#
+#··v#
+#---#
+The soldiers kill another 2 Zorglings. t=8s
+
+In t=9, one Zorgling reaches the walls, destroying the defenses. So, in this case, the output you should give is 8 seconds.
+
+Sample input
+
+2
+10 20 50 100 400
+10 20 50 100 500
+
+
+Sample output
+
+100
+-1
