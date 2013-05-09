@@ -1,0 +1,21 @@
+Challenge 10 - The Checking Machine
+Give the correct answer.
+
+Input
+
+One test case per line.
+Output
+
+Output the solution for each test case in a separate line.
+
+
+Sample input
+
+a2[b3[c]]
+10[abc]
+
+
+Sample output
+
+c53115f92f2cbee6cb25be4a42f03fba
+1b66558be2b2cd898ebc3383623a3677
