@@ -1,0 +1,78 @@
+Challenge 5 - Dungeon Quest
+You have been hired to implement a simple AI for a new action RPG game. The game designers have given you the following specfications:
+
+The scenario of the game consists of a grid of N x M cells and your character can move forward, right or left but never go back to the previous cell (like the classic cell phone game, Snake). Your character moves at the speed of 1 cell per second. Once you beat the stage several gems appear on random cells in the scenario and disappear after Z seconds. There are 3 different types of gems with values of 1, 2 and 5. Your task is to implement an algorithm to find a path that maximizes the total value of gems collected in the Z seconds they remain visible.
+
+For example, given the following 5 x 5 grid where the numbers indicate the value of the gems in the cells and the character x is the current position of your character:
+
+2 - 2 - 2 - 0 - 0
+|   |   |   |   |
+0 - 2 - 2 - 0 - 0
+|   |   |   |   |
+0 - 0 - x - 5 - 0
+|   |   |   |   |
+0 - 0 - 0 - 5 - 0
+|   |   |   |   |
+0 - 0 - 0 - 0 - 0
+A possible solution for a given time of 6 seconds would be:
+
+2 - 2 - 2 - 0 - 0    2 - 2 - 2 - 0 - 0    2 - 2 - 2 - 0 - 0
+|   |   |   |   |    |   |   |   |   |    |   |   |   |   |
+0 - 2 - 2 - 0 - 0    0 - 2 - 2 - 0 - 0    0 - 2 - 2 - 0 - 0
+|   |   |   |   |    |   |   |   |   |    |   |   |   |   |
+0 - 0 - 0 - x - 0 => 0 - 0 - 0 - 0 - 0 => 0 - 0 - 0 - 0 - 0
+|   |   |   |   |    |   |   |   |   |    |   |   |   |   |
+0 - 0 - 0 - 5 - 0    0 - 0 - 0 - x - 0    0 - 0 - x - 0 - 0
+|   |   |   |   |    |   |   |   |   |    |   |   |   |   |
+0 - 0 - 0 - 0 - 0    0 - 0 - 0 - 0 - 0    0 - 0 - 0 - 0 - 0
+
+2 - 2 - 2 - 0 - 0    2 - 2 - 2 - 0 - 0    2 - 2 - x - 0 - 0
+|   |   |   |   |    |   |   |   |   |    |   |   |   |   |
+0 - 2 - 2 - 0 - 0    0 - 2 - x - 0 - 0    0 - 2 - 0 - 0 - 0
+|   |   |   |   |    |   |   |   |   |    |   |   |   |   |
+0 - 0 - x - 0 - 0 => 0 - 0 - 0 - 0 - 0 => 0 - 0 - 0 - 0 - 0
+|   |   |   |   |    |   |   |   |   |    |   |   |   |   |
+0 - 0 - 0 - 0 - 0    0 - 0 - 0 - 0 - 0    0 - 0 - 0 - 0 - 0
+|   |   |   |   |    |   |   |   |   |    |   |   |   |   |
+0 - 0 - 0 - 0 - 0    0 - 0 - 0 - 0 - 0    0 - 0 - 0 - 0 - 0
+With a final result of 14 in gem value
+
+Input
+
+The first line of the input is the number of test cases that follows. Each problem has 5 lines:
+
+M, N: width and height of the grid.
+X, Y: initial position on the grid.
+Z: number of seconds until the gems disappear.
+G: number of gems in the grid.
+i0,j0,k0#i1,j1,k1#...#iT-1,kT-1,jT-1: iT, jT are the coordinates of the Tth gem in the grid and kT is the value of the Tth gem.
+Output:
+
+The value of the gems collected for each test case, each one in a different line.
+
+Sample input:
+
+2
+5,5
+2,2
+6
+7
+0,0,2#1,0,2#2,0,2#1,1,2#1,2,2#3,2,5#3,3,5
+4,4
+2,2
+5
+7
+1,0,5#1,1,1#2,1,2#1,2,1#3,2,2#2,3,5#3,3,2
+
+
+Sample output:
+
+14
+12
+
+
+Limits:
+
+3 ≤ M ≤ 100
+3 ≤ N ≤ 100
+2 ≤ Z ≤ 20
