@@ -1,0 +1,4 @@
+Challenge 12 - Whispering paRTTY
+We like to whisper small little secrets here around the office. In order to do so, we use a nice protocol that we didn't invent (you know, we don't like to reinvent the wheel). Can you read what we say?
+
+Psst... somehow one engineer left a message coder open to the world at partty.contest.tuenti.net:1414
