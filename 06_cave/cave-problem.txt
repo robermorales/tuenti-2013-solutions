@@ -1,0 +1,59 @@
+Challenge 6 - Ice Cave
+You are trapped inside a dark cave. You are freezing, and you realize that you won't last much longer if you don't escape. The cave's floor is covered in ice, so if you try to move, you will slide until something (a rock, a wall...) stops you. You need to find a way out of the cave if you want to survive, and you want to figure out how long it will take you.
+
+Input
+
+The first line of the input is an integer, N. N test cases follow. For each test case, you will be given the width and length W and H (in meters) of the cave, the speed S (in m/s) that you will have while sliding, and the time T (in seconds) that you will need to make yourself move after you stop. Those values are contained in a single line, separated by whitespaces. You will also have a rudimentary map of that cave.
+
+Output
+
+For each test case, output the time in seconds (rounded, half a second won't make any difference in your survival options) that you will need to escape the cave.
+
+Note: You can only move up, down, right or left, not diagonally. And while you are sliding, you have absolutely no control so you can't turn or stop.
+
+Map legend
+
+· Ice
+# Obstacle (wall, rock, whatever)
+X Your starting position
+O (Uppercase "o") Exit
+The exit is always on the border of the cave, and will allways be reachable.
+
+Example test case
+
+4 5 1 3
+####
+#X·#
+#··#
+#··O
+####
+Here, the map dimensions are 4x5, you slide at 1m/s, and you have to spend 3 seconds to start sliding after you stop (or before you start).
+
+
+
+Sample input
+
+2
+4 5 1 3
+####
+#X·#
+#··#
+#··O
+####
+6 8 1 1
+######
+#X#··#
+#····#
+#····#
+##···#
+#··###
+#····O
+######
+
+
+Sample output
+
+10
+19
+
+PS: Yes, we've played Pokemon Gold/Silver. Deal with it.
