@@ -28,7 +28,3 @@ A hex-encoded ciphertext produced by the new ovine cipher.
 Output
 
 The plain text obtained by decrypting the input.
-Submit & test your code
-To test and submit code we provide a set of tools to help you. Download contest tools if you haven't already done that. You will then be able to test and submit your solution to this challenge with the challenge token.
-
-Challenge token: N_w5xdc7p1NJ5FQGQrwS
